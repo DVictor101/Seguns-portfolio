@@ -9,23 +9,20 @@ const mainCorrect = document.querySelector(".maincorrect");
 const shadowBody = document.querySelector(".body__close");
 //function
 
-const shadowTestSlide = function () {
-  const slide = shadowBody.classList.toggle("hidden");
-  return slide;
-};
-
 //orders
 btnDiv.addEventListener("click", function () {
-  mainTest.classList.toggle("hidden");
-  mainTest.classList.toggle("animate__rollIn");
-  shadowTestSlide();
-  shadowBody.classList.toggle("animate__fadeIn");
+  mainTest.classList.remove("hidden");
+  mainTest.classList.add("animate__rollIn");
+  shadowBody.classList.remove("hidden");
+  shadowBody.classList.add("animate__fadeIn");
   btnDiv.classList.toggle("animate__rotateIn");
+  mainTest.classList.remove("animate__slideOutLeft");
 });
 //SHADOWBODY CLICK CORRECTION TO THE MAIN TEST
 shadowBody.addEventListener("click", function () {
-  shadowTestSlide();
-
+  shadowBody.classList.add("hidden");
+  mainTest.classList.add("hidden");
+  // mainTest.classList.remove("animate__rollIn");
   mainTest.classList.toggle("animate__slideOutLeft");
 });
 

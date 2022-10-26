@@ -191,7 +191,7 @@ nav {
   height: 100%;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.2);
-  z-index: 2;
+  z-index: 2005;
 }
 
 .nav__heading {
@@ -204,10 +204,15 @@ nav {
   font-family: "Poppins", sans-serif;
 }
 
+.slider-name {
+  background-color: rgba(79, 93, 89, 0.7);
+}
+
 .nav-btn_div {
   display: flex;
   flex-direction: column;
   padding: 10px;
+  z-index: 200;
 }
 
 .nav__btn {
@@ -417,55 +422,57 @@ nav {
   justify-content: space-evenly;
 }
 
-@media screen and (min-width: 424px) {
+@media (max-width: 480px) {
   .aboutme__sec {
-    height: 20rem;
-  }
-  .skill__sec {
-    height: 25rem;
-  }
-  .project__section, .modal__explain {
-    height: 43rem;
-  }
-  .secondsection__carousal {
     height: 25rem;
   }
 }
-@media screen and (min-width: 767px) {
+@media (max-width: 799px) {
+  .nav-btn_div {
+    display: none;
+  }
   .testmain {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 4%;
-    width: 100%;
-    position: fixed;
-    z-index: 20;
-    position: absolute;
     display: inline-block;
-    margin-bottom: 20px;
+    position: absolute;
+    height: 50px;
+    width: 60%;
+    margin-top: -5%;
+    right: 0;
+    background-color: transparent;
   }
-  .project__section, .modal__explain {
-    height: 80rem;
-    background-color: aqua;
-  }
-  .secondsection__carousal {
-    background-color: azure;
-    height: 50rem;
-    margin-top: 3rem;
-  }
-  .img__reshaped {
-    height: 75rem;
+  .maincorrect {
+    display: flex;
   }
   .main--ul {
-    list-style-type: none;
+    width: 100%;
     display: flex;
     justify-content: space-between;
   }
   .main--li {
-    padding: 10px;
-    font-weight: 900;
-    color: blue;
-    font-family: "Roboto", sans-serif;
+    color: white;
+  }
+  svg {
+    display: none;
+  }
+  .aboutme__sec {
+    height: 23rem;
+    padding: 30px 10px;
+  }
+  .aboutme__p {
+    line-height: 30px;
+  }
+  a {
+    padding: 10px 20px;
+  }
+  .aboume--btn__cv {
+    font-size: 1.2rem;
+  }
+  .footer__footer {
+    padding: 10px 0;
+    width: 80%;
+    align-self: center;
+  }
+  .subfooter__sec {
+    width: 80%;
   }
 }/*# sourceMappingURL=style.css.map */
