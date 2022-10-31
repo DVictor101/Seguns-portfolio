@@ -607,6 +607,9 @@ svg {
     padding: 0 0;
     display: flex;
   }
+  .aboume--btn__cv {
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 799px) {
   .aboutme__sec {
