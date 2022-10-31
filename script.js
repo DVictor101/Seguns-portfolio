@@ -11,6 +11,7 @@ const shadowBody = document.querySelector(".body__close");
 
 //orders
 btnDiv.addEventListener("click", function () {
+  mainTest.style.display = "block";
   mainTest.classList.remove("hidden");
   mainTest.classList.add("animate__rollIn");
   shadowBody.classList.remove("hidden");
@@ -32,7 +33,7 @@ const aboutSection = document.querySelector(".aboutme__sec");
 const skillButton = document.querySelector(".main--skill_li");
 const skillSection = document.querySelector(".skill__sec");
 const projectButton = document.querySelector(".main-li__projects");
-const projectSection = document.querySelector(".project__section");
+const projectSection = document.querySelector(".projects");
 const contactButton = document.querySelector(".main-list__contact");
 const contactSection = document.querySelector(".footer__section");
 //programs
