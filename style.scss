@@ -33,25 +33,8 @@ nav {
   padding: 2%;
   position: relative;
 }
-.body__close {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 20;
-}
-.nav__heading {
-  @include rowcenter();
-  color: white;
-  font-style: italic;
-  font-size: 1.5rem;
-  font-family: "Poppins", sans-serif;
-}
-.slider-name {
-  background-color: rgb(79, 93, 89, 0.7);
-}
 .nav-btn_div {
-  display: flex;
+  display: none;
   flex-direction: column;
   padding: 10px;
   z-index: 200;
@@ -66,39 +49,33 @@ nav {
   border-radius: 2px;
   margin: 2px;
 }
-//TEST MAIN CONYENT
 .testmain {
-  @include rowcenter();
-  height: 90vw;
-  width: 80%;
-  margin: auto;
-  z-index: 20;
-  position: absolute;
-
-  height: 50px;
-  width: 60%;
-  margin-top: -5%;
+  display: flex;
   right: 0;
-}
-.hidden {
-  display: none;
-}
-//restyled
+  width: 60%;
+  justify-content: flex-end;
 
-.maincorrect {
-  display: flex;
-}
-.main--ul {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-}
+  .main--ul {
+    width: 80%;
+    display: flex;
 
-svg {
-  display: none;
+    justify-content: space-around;
+    list-style-type: none;
+  }
+  svg {
+    display: none;
+  }
 }
-//THE MAIN TAB STYLING
+.nav__heading {
+  @include rowcenter();
+  color: white;
+  font-style: italic;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+.slider-name {
+  background-color: rgb(79, 93, 89, 0.7);
+}
 
 .main--li {
   padding: 10px;
@@ -111,7 +88,18 @@ svg {
   transition: 0.5ms;
 }
 .main--li:hover {
-  font-size: 1.3rem;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+//BODY SHADDOW PROPERTY
+.body__close {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  background-color: rgba(0, 0, 0, 0.2);
 }
 //ABOUT ME STYLING STARTS HERE
 .about--main {
@@ -169,7 +157,7 @@ svg {
     color: blue;
   }
 }
-//THE SKILL SECTION
+//THE SKILL SECTIO
 .skill__sec {
   background-color: white;
   margin-top: 20px;
@@ -191,7 +179,13 @@ svg {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
-//ECOMMERCEE PROJECT STYLING
+//PROJECT STYLING
+.project__sec {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+}
 .ecommerce__sec {
   display: flex;
 
@@ -238,182 +232,89 @@ svg {
     font-weight: 500;
   }
 }
-//PROJECT STYLING STARTS HERE
-.main--project__control {
-  display: flex;
-  background-color: yellow;
-  flex-direction: column;
-}
-.project__section {
-  width: 100%;
-  height: 37rem;
-  display: flex;
-  justify-content: center;
-}
-.project__heading {
-  @extend .skill__heading;
-  margin-top: 5px;
-}
-.project__resized {
-  width: 90%;
-  height: 100%;
-}
-.projecttwo {
-  margin-top: 10px;
-}
-.img__reshaped {
-  height: 37rem;
-}
-.line-through {
-  background-color: black;
-  height: 10px;
-  font-weight: bold;
-}
-.modal__explain {
-  @extend .project__section;
-  height: 5rem;
-}
-.secondsection__carousal {
-  height: 25rem;
-}
-.modal-explain__p {
-  width: 90%;
-  text-align: left;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-.maincorrect {
-  width: 100%;
-  height: 100%;
-}
+//FOOTER STYLING
 .footer__section {
-  margin-top: 10px;
-  display: flex;
-  height: 10rem;
+  background-color: blue;
   color: white;
-  flex-direction: column;
-  width: 100%;
-
-  background-color: rgb(0, 0, 255);
+  padding: 20px 30px;
+}
+.phonelink {
+  color: white;
+  text-decoration: none;
+}
+.maillink {
+  color: white;
+  text-decoration: none;
 }
 .subfooter__sec {
   display: flex;
-  align-self: flex-start;
   flex-direction: column;
-  width: 80%;
-  padding: 0 30px;
-}
-.footer__footer {
-  padding: 10px;
-  display: flex;
-  align-self: flex-start;
-  flex-direction: column;
-  width: 80%;
-  padding: 10px 30px;
-
-  &:hover {
-    color: black;
-  }
-}
-.phone__content__div {
-  display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .git--content__div {
   display: flex;
-}
-.phonelink {
-  text-decoration: none;
-  padding: 5px 0;
-  color: white;
-  font-weight: 900;
-  font-family: "Roboto", sans-serif;
+  align-items: center;
+  justify-content: center;
 
-  &:hover {
-    color: black;
+  a {
+    padding: 20px 100px;
   }
 }
-.maillink {
-  @extend .phonelink;
+
+//RESPONSIVE STYLIN START
+@media (max-width: 799px) {
+  .about--main {
+    height: 32rem;
+  }
 }
-.git--content__div {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-evenly;
-}
+
 @media (max-width: 480px) {
-  //ABOUT ME STYLING STARTS HERE
-
-  .nav-btn_div {
-    display: flex;
-  }
   .testmain {
     display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 0;
-    z-index: 1000;
-    position: absolute;
-    height: 60vh;
-    width: 80%;
-
     left: 0;
-    background-color: transparent;
+    width: 80%;
+    height: 60vh;
+    position: absolute;
+    justify-content: flex-start;
+
+    background-color: rgba(0, 0, 0, 0.5);
   }
-  svg {
-    display: block;
-    padding: 0 10px;
-  }
-  .maincorrect {
-    margin-top: 30px;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  .main--ul {
-    width: 100%;
+  .nav-btn_div {
     display: flex;
+    z-index: 2000;
+  }
+  .testmain .main--ul {
+    width: 80%;
+    display: flex;
+
     flex-direction: column;
-    justify-content: space-between;
+    height: 65%;
+    justify-content: space-around;
     align-items: flex-start;
     list-style-type: none;
-    height: 70%;
-    padding-top: 20px;
   }
-
   .main--li {
     padding: 10px;
-
-    width: 100%;
-    display: flex;
 
     align-self: flex-start;
   }
   .aboutme__sec {
     height: 30rem;
-    flex-direction: column;
-    background-position: top 30% right -150px;
     background-image: none;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
   }
   .aboutme__div {
     width: 100%;
     display: flex;
-    padding: 10px;
+    padding: 5px;
     flex-direction: column;
     align-items: flex-start;
   }
   .skill__sec {
-    width: 100%;
-    margin-top: 10px;
+    height: 25rem;
   }
   .skill--sec__div {
     width: 100%;
-  }
-  .projects {
-    padding: 0 30px;
   }
   .ecommerce__sec {
     display: flex;
@@ -422,55 +323,15 @@ svg {
   }
   .ecommerce__img {
     width: 90%;
-    padding: 10px 30px;
-    height: 500px;
+    padding: 0;
   }
   .ecommerce__img img {
-    width: 100%;
-    height: 100%;
     border-radius: 0;
   }
   .ecommerce__desc {
-    width: 80%;
-    padding: 10px 30px;
-  }
-  .phone__content__div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .phonelink,
-  .maillink {
-    padding: 0 0;
-    display: flex;
-  }
-  .aboume--btn__cv {
-    margin-bottom: 20px;
-  }
-}
-@media (max-width: 799px) {
-  .aboutme__sec {
-    margin-bottom: 30px;
-  }
-  .testmain {
-    margin-top: -7%;
-  }
-  .footer__section {
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer__footer {
-    display: flex;
-    align-self: center;
-    text-align: center;
-    flex-direction: column;
     width: 100%;
   }
-  .subfooter__sec {
-    display: flex;
-    align-self: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
+  .git--content__div a {
+    padding: 20px 30px;
   }
 }

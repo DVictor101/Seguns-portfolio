@@ -1,62 +1,52 @@
 "strict";
-const btnDiv = document.querySelector(".nav-btn_div");
-//.classList.add("animate__lightSpeedInLeft");
-//switching between on and off
+const menuButton = document.querySelector(".nav-btn_div");
+const sideBar = document.querySelector(".testmain");
+const bodyBackground = document.querySelector(".body__close");
+//BACKGROUND CLICK SCRIPT USED FOR OTHER SECTION NAVIGATION
 
-//variables
-const mainTest = document.querySelector(".testmain");
-const mainCorrect = document.querySelector(".maincorrect");
-const shadowBody = document.querySelector(".body__close");
-//function
+const autoCorrectDisplay = function () {
+  sideBar.style.display = "none";
+  sideBar.classList.add("animate__slideOutLeft");
+  sideBar.classList.remove("animate__rollIn");
+  menuButton.classList.remove("animate__rotateIn");
+  bodyBackground.classList.add("hidden");
+};
 
-//orders
-btnDiv.addEventListener("click", function () {
-  mainTest.style.display = "block";
-  mainTest.classList.remove("hidden");
-  mainTest.classList.add("animate__rollIn");
-  shadowBody.classList.remove("hidden");
-  shadowBody.classList.add("animate__fadeIn");
-  btnDiv.classList.toggle("animate__rotateIn");
-  mainTest.classList.remove("animate__slideOutLeft");
+menuButton.addEventListener("click", function () {
+  menuButton.classList.toggle("animate__rotateIn");
+  sideBar.style.display = "block";
+  sideBar.classList.add("animate__rollIn");
+  bodyBackground.classList.remove("hidden");
+  sideBar.classList.remove("animate__slideOutLeft");
 });
-//SHADOWBODY CLICK CORRECTION TO THE MAIN TEST
-shadowBody.addEventListener("click", function () {
-  shadowBody.classList.add("hidden");
-  mainTest.classList.add("hidden");
-  // mainTest.classList.remove("animate__rollIn");
-  mainTest.classList.toggle("animate__slideOutLeft");
+bodyBackground.addEventListener("click", function () {
+  autoCorrectDisplay();
 });
 
-//THE SCOOL TO SCRIPT CONTENT
+//SECTION NAVIGATION SCRIPT
 const aboutMeButton = document.querySelector(".main--li--aboutme");
 const aboutSection = document.querySelector(".aboutme__sec");
 const skillButton = document.querySelector(".main--skill_li");
 const skillSection = document.querySelector(".skill__sec");
 const projectButton = document.querySelector(".main-li__projects");
-const projectSection = document.querySelector(".projects");
+const projectSection = document.querySelector(".project__sec");
 const contactButton = document.querySelector(".main-list__contact");
 const contactSection = document.querySelector(".footer__section");
-//programs
+
+//ABOUT ME
 aboutMeButton.addEventListener("click", function () {
   aboutSection.scrollIntoView({ behavior: "smooth" });
-  mainTest.classList.toggle("hidden");
-  shadowTestSlide();
+  autoCorrectDisplay();
 });
-//*****skills */
 skillButton.addEventListener("click", function () {
   skillSection.scrollIntoView({ behavior: "smooth" });
-  mainTest.classList.toggle("hidden");
-  shadowTestSlide();
+  autoCorrectDisplay();
 });
-//PROJECTS
 projectButton.addEventListener("click", function () {
   projectSection.scrollIntoView({ behavior: "smooth" });
-  mainTest.classList.toggle("hidden");
-  shadowTestSlide();
+  autoCorrectDisplay();
 });
-//CONTACTS
 contactButton.addEventListener("click", function () {
   contactSection.scrollIntoView({ behavior: "smooth" });
-  mainTest.classList.toggle("hidden");
-  shadowTestSlide();
+  autoCorrectDisplay();
 });
