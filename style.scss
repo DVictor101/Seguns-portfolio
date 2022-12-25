@@ -33,6 +33,7 @@ nav {
   padding: 2%;
   position: relative;
 }
+
 .nav-btn_div {
   display: none;
   flex-direction: column;
@@ -262,7 +263,7 @@ nav {
   }
 }
 
-//RESPONSIVE STYLIN START
+//RESPONSIVE STYLIN START  HERE
 @media (max-width: 799px) {
   .about--main {
     height: 32rem;
@@ -332,6 +333,46 @@ nav {
     width: 100%;
   }
   .git--content__div a {
+    padding: 20px 30px;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .aboume--btn__cv {
+    margin-bottom: 10px;
+  }
+  .marque__cont {
+    margin-top: 120px;
+  }
+  //PROJECT STYLING
+  .project__sec {
+    margin-top: 0;
+
+    padding: 0px 30px;
+  }
+  .ecommerce__sec {
+    display: flex;
+
+    align-items: center;
+  }
+  .ecommerce__img {
+    width: 100%;
+    padding: 10px 30px;
+    height: 500px;
+
+    img {
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+  .ecommerce__desc {
+    width: 100%;
+  }
+  .skill__sec {
+    background-color: white;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    height: 25rem;
     padding: 20px 30px;
   }
 }
